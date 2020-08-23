@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'md-radio-button-disclaimers';
+  public title = 'md-radio-button-disclaimers';
+  public titleDeclaration = 'app is running!';
 }
