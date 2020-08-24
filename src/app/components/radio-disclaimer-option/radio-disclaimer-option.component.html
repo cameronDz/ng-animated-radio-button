@@ -2,3 +2,4 @@
   <input type="radio" [checked]="option.selected" [name]="option.parent" [value]="option.value">
   <label [for]="option.display">{{option.display}}</label>
 </div>
+<div *ngIf="isDisplayable && option.disclaimer && option.selected">{{option.disclaimer}}</div>

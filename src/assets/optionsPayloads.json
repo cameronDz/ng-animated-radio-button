@@ -3,10 +3,10 @@
     "basicData": [
       {
         "disabled": false,
-        "disclaimer": "",
+        "disclaimer": "Testing ABC 123",
         "display": "Test One",
         "parent": "option-001",
-        "selected": false,
+        "selected": true,
         "value": "0001"
       },
       {
