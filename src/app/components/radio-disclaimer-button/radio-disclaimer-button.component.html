@@ -1,1 +1,6 @@
-<p>radio-disclaimer-button works!</p>
+<ng-container *ngIf="hasOptions">
+  <p *ngIf="!!title">{{title}}</p>
+  <ng-container *ngFor="let option in options">
+    <md-radio-disclaimer-option [option]="option"></md-radio-disclaimer-option>
+  </ng-container>
+</ng-container>

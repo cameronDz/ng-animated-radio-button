@@ -1,1 +1,4 @@
-<p>radio-disclaimer-option works!</p>
+<div *ngIf="isDisplayable">
+  <input type="radio" [checked]="option.selected" [name]="option.parent" [value]="option.value">
+  <label [for]="option.display">{{option.display}}</label>
+</div>

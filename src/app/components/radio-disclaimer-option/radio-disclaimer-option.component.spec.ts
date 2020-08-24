@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RadioDisclaimerOptionComponent } from './radio-disclaimer-option.component';
 
-describe('RadioDisclaimerOptionComponent', () => {
+xdescribe('RadioDisclaimerOptionComponent', () => {
   let component: RadioDisclaimerOptionComponent;
   let fixture: ComponentFixture<RadioDisclaimerOptionComponent>;
 
