@@ -1,0 +1,38 @@
+{
+  "payloads": {
+    "basicData": [
+      {
+        "disabled": false,
+        "disclaimer": "",
+        "display": "Test One",
+        "parent": "option-001",
+        "selected": false,
+        "value": "0001"
+      },
+      {
+        "disabled": false,
+        "disclaimer": "",
+        "display": "Test Two",
+        "parent": "option-001",
+        "selected": false,
+        "value": "0002"
+      },
+      {
+        "disabled": false,
+        "disclaimer": "",
+        "display": "Test Three",
+        "parent": "option-001",
+        "selected": false,
+        "value": "0003"
+      },
+      {
+        "disabled": false,
+        "disclaimer": "",
+        "display": "Test Four",
+        "parent": "option-001",
+        "selected": false,
+        "value": "0004"
+      }
+    ]
+  }
+}
