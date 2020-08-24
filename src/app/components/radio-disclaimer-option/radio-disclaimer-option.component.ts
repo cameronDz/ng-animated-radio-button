@@ -17,7 +17,7 @@ export class RadioDisclaimerOptionComponent implements OnChanges, OnInit {
   ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes && changes.options) {
+    if (changes && changes.option) {
       this.isDisplayable = !!((this.option) && (this.option.display) && (this.option.parent) && (this.option.value));
     }
   }
