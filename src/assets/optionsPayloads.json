@@ -19,7 +19,7 @@
       },
       {
         "disabled": false,
-        "disclaimer": "",
+        "disclaimer": "ABC Testing GO to ONE TWO THREE",
         "display": "Test Three",
         "parent": "option-001",
         "selected": false,

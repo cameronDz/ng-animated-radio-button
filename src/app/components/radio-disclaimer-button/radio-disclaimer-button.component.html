@@ -1,6 +1,9 @@
 <ng-container *ngIf="hasOptions">
   <p *ngIf="!!title">{{title}}</p>
   <ng-container *ngFor="let option of options">
-    <md-radio-disclaimer-option [option]="option"></md-radio-disclaimer-option>
+    <md-radio-disclaimer-option
+      [option]="option"
+      (onSelection)="handleSelection($event)">
+    </md-radio-disclaimer-option>
   </ng-container>
 </ng-container>

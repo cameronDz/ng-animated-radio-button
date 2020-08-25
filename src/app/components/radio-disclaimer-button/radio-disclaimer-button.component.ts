@@ -22,4 +22,22 @@ export class RadioDisclaimerButtonComponent implements OnChanges, OnInit {
       this.hasOptions = !!((this.options) && (this.options.length));
     }
   }
+
+  public handleSelection(value: string): void {
+    if (this.isValueWithinOptions(value)) {
+      const length: number = this.options ? this.options.length : 0;
+      for (let idx: number = 0; idx < length; idx++) {
+        const option: RadioDisclaimerOptionModel = this.options[idx];
+        if (option) {
+          option.selected = value === option.value;
+        }
+      }
+    }
+  }
+
+  private isValueWithinOptions(value: string): boolean {
+    return this.options && this.options.some((option: RadioDisclaimerOptionModel): boolean => {
+      return option && option.value === value;
+    });
+  }
 }
