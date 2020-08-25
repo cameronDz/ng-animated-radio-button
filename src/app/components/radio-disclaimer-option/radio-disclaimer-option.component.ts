@@ -8,10 +8,10 @@ import { RadioButtonDisclaimerState } from 'src/app/models/radio-button-disclaim
   styleUrls: ['./radio-disclaimer-option.component.scss'],
   animations: [
     trigger('buttonDisclaimerState', [
-      state(RadioButtonDisclaimerState.COLLAPSED, style({ display: 'none' })),
-      state(RadioButtonDisclaimerState.EXPANDED, style({ display: 'block' })),
-      transition(`${RadioButtonDisclaimerState.COLLAPSED} => ${RadioButtonDisclaimerState.EXPANDED}`, animate('500ms ease-out')),
-      transition(`${RadioButtonDisclaimerState.EXPANDED} => ${RadioButtonDisclaimerState.COLLAPSED}`, animate('500ms ease-in'))
+      state(RadioButtonDisclaimerState.COLLAPSED, style({ height: '0', opacity: '0', display: 'none' })),
+      state(RadioButtonDisclaimerState.EXPANDED, style({ height: '*', opacity: '1', marginBottom: '16px', display: 'block' })),
+      transition(`${RadioButtonDisclaimerState.COLLAPSED} => ${RadioButtonDisclaimerState.EXPANDED}`, animate('250ms ease-out')),
+      transition(`${RadioButtonDisclaimerState.EXPANDED} => ${RadioButtonDisclaimerState.COLLAPSED}`, animate('250ms ease-in'))
     ])
   ]
 })
