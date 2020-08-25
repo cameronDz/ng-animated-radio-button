@@ -1,9 +1,9 @@
 <div *ngIf="isDisplayable">
   <input type="radio"
-    [checked]="option.selected"
-    [name]="option.parent"
-    [value]="option.value"
-    (click)="handleOnClick()">
-  <label [for]="option.display">{{option.display}}</label>
+    [checked]="selected"
+    [name]="parent"
+    [value]="value"
+    (click)="handleClick()">
+  <label [for]="display">{{display}}</label>
 </div>
-<div *ngIf="isDisplayable && option.disclaimer && option.selected">{{option.disclaimer}}</div>
+<div [@buttonDisclaimerState]="radioButtonDisclaimerState">{{disclaimer}}</div>
