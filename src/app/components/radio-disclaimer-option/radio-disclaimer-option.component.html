@@ -1,4 +1,4 @@
-<div *ngIf="isDisplayable">
+<div *ngIf="isDisplayable" class="input-option-container">
   <input type="radio"
     [checked]="selected"
     [name]="parent"
@@ -6,4 +6,4 @@
     (click)="handleClick()">
   <label [for]="display">{{display}}</label>
 </div>
-<div [@buttonDisclaimerState]="radioButtonDisclaimerState">{{disclaimer}}</div>
+<div *ngIf="!!disclaimer" [@buttonDisclaimerState]="radioButtonDisclaimerState">{{disclaimer}}</div>
