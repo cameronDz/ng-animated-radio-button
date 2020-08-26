@@ -14,6 +14,7 @@ export class AppComponent implements OnInit, OnDestroy {
   public loading = false;
   public options: Array<RadioDisclaimerOptionModel> = [];
 
+  public showTests: boolean = true;
   public title = 'md-radio-button-disclaimers';
   public titleDeclaration = 'app is running!';
 
