@@ -28,7 +28,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    const expectedConatining = 'md-radio-button-disclaimers app is running!'
+    const expectedConatining = 'md-radio-button-disclaimers';
     expect(compiled.querySelector('.content span').textContent).toContain(expectedConatining);
   });
 });

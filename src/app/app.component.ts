@@ -13,33 +13,39 @@ export class AppComponent implements OnInit, OnDestroy {
   public buttonTitle = 'Test Radio Buttons';
   public loading = false;
   public options: Array<RadioDisclaimerOptionModel> = [];
-
-  public showTests: boolean = false;
   public title = 'md-radio-button-disclaimers';
-  public titleDeclaration = 'app is running!';
 
   private buttonOptionsSubscription: Subscription = null;
 
   constructor(private buttonOptionsService: ButtonOptionsService) {}
 
   ngOnInit(): void {
-    this.loading = true;
-    this.buttonOptionsService.getButtonOptionsList().subscribe(
-      (data: Array<RadioDisclaimerOptionModel>): void => {
-        if (data && data.length) {
-          this.options = data;
-        }
-      },
-      (error: any): void => {},
-      (/* completed */): void => {
-        this.loading = false;
-      }
-    );
+    this.getButtonOptionsData();
   }
 
   ngOnDestroy(): void {
     if (this.buttonOptionsSubscription) {
       this.buttonOptionsSubscription.unsubscribe();
     }
+  }
+
+  private getButtonOptionsData(): void {
+    this.loading = true;
+    this.buttonOptionsService.getButtonOptionsList().subscribe(
+      (data: Array<RadioDisclaimerOptionModel>): void => this.buttonServiceSuccessCallback(this, data),
+      (error: any): void => this.buttonServiceErrorCallback(this, error),
+      (/* completed */): void => this.buttonServiceCompletedCallback(this));
+  }
+
+  private buttonServiceSuccessCallback(self: AppComponent, data: Array<RadioDisclaimerOptionModel>): void {
+    if (data && data.length) {
+      self.options = data;
+    }
+  }
+
+  private buttonServiceErrorCallback(self: AppComponent, error: any): void {}
+
+  private buttonServiceCompletedCallback(self: AppComponent): void {
+    self.loading = false;
   }
 }
