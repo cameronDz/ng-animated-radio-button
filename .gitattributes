@@ -1,0 +1,15 @@
+# set config for storing files in source control
+*.html text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.jsx text eol=lf
+*.md text eol=lf
+*.scss text eol=lf
+*.ts text eol=lf
+
+.* text eol=lf
+browerslist text eol=lf
+
+# Denote all files that are truly binary and should not be modified.
+*.ico binary
+*.png binary
