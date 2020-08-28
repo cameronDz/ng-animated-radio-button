@@ -21,3 +21,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Developer Notes ##
+* Using package ```@angular-devkit/build-angular": "0.901.9``` due to build issues using Angular 9.x.x - [StackOverflow Thread](https://stackoverflow.com/questions/62586650/constructorparametersdownleveltransform-is-not-a-function-in-angular).
