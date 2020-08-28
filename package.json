@@ -38,10 +38,11 @@
   "name": "md-radio-button-disclaimers",
   "private": true,
   "scripts": {
-    "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "start": "ng serve",
+    "test": "ng test --watch=false --code-coverage=true --browsers ChromeHeadless",
+    "watch-test": "ng test --code-coverage=true"
   },
   "version": "1.0.0"
 }
