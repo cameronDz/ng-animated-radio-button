@@ -3,8 +3,7 @@ import { RadioDisclaimerOptionModel } from '../../models/radio-disclaimer-option
 
 @Component({
   selector: 'md-radio-disclaimer-button',
-  templateUrl: './radio-disclaimer-button.component.html',
-  styleUrls: ['./radio-disclaimer-button.component.scss']
+  templateUrl: './radio-disclaimer-button.component.html'
 })
 export class RadioDisclaimerButtonComponent implements OnChanges, OnInit {
 
