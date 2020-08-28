@@ -6,7 +6,7 @@ import { ButtonOptionsService } from './services/button-options.service';
 import { RadioDisclaimerButtonComponent } from './components/radio-disclaimer-button/radio-disclaimer-button.component';
 import { RadioDisclaimerOptionComponent } from './components/radio-disclaimer-option/radio-disclaimer-option.component';
 
-describe('AppComponent', () => {
+describe('AppComponent', (): void => {
   const testConfig: TestModuleMetadata = {
     declarations: [
       AppComponent,
@@ -21,23 +21,23 @@ describe('AppComponent', () => {
     ]
   };
 
-  beforeEach(async(() => {
+  beforeEach(async((): void => {
     TestBed.configureTestingModule(testConfig).compileComponents();
   }));
 
-  it('should create the app', () => {
+  it('should create the app', (): void => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'md-radio-button-disclaimers'`, () => {
+  it(`should have as title 'md-radio-button-disclaimers'`, (): void => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('md-radio-button-disclaimers');
   });
 
-  it('should render title', () => {
+  it('should render title', (): void => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
