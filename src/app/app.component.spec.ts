@@ -1,11 +1,24 @@
-import { TestBed, async } from '@angular/core/testing';
+import { async, TestBed, TestModuleMetadata } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppComponent } from './app.component';
+import { ButtonOptionsService } from './services/button-options.service';
+import { RadioDisclaimerButtonComponent } from './components/radio-disclaimer-button/radio-disclaimer-button.component';
+import { RadioDisclaimerOptionComponent } from './components/radio-disclaimer-option/radio-disclaimer-option.component';
 
 describe('AppComponent', () => {
-  const testConfig: any = {
+  const testConfig: TestModuleMetadata = {
     declarations: [
-      AppComponent
+      AppComponent,
+      RadioDisclaimerButtonComponent,
+      RadioDisclaimerOptionComponent
     ],
+    imports: [
+      BrowserAnimationsModule
+    ],
+    providers: [
+      ButtonOptionsService
+    ]
   };
 
   beforeEach(async(() => {
