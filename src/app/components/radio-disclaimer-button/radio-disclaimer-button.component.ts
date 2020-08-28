@@ -8,7 +8,7 @@ import { RadioDisclaimerOptionModel } from '../../models/radio-disclaimer-option
 export class RadioDisclaimerButtonComponent implements OnChanges, OnInit {
 
   @Input() options: Array<RadioDisclaimerOptionModel> = [];
-  @Input() title = '';
+  @Input() title: string = '';
 
   public hasOptions = false;
 

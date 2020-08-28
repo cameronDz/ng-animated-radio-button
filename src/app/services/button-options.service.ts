@@ -3,9 +3,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { RadioDisclaimerOptionModel } from '../models/radio-disclaimer-option.model';
 import * as _data from '../../assets/optionsPayloads.json';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class ButtonOptionsService {
 
   constructor() {}

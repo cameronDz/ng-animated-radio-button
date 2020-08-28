@@ -19,7 +19,7 @@ export class RadioDisclaimerOptionComponent implements OnChanges, OnInit {
   @Input() value: string = '';
   @Output() onSelection: EventEmitter<string> = new EventEmitter<string>();
 
-  public isDisplayable = false;
+  public isDisplayable: boolean = false;
   public radioButtonDisclaimerState: RadioButtonDisclaimerState = RadioButtonDisclaimerState.COLLAPSED;
 
   constructor() {}

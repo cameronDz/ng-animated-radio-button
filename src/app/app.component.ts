@@ -10,10 +10,10 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  public buttonTitle = 'Test Radio Buttons';
-  public loading = false;
+  public buttonTitle: string = 'Test Radio Buttons';
+  public loading: boolean = false;
   public options: Array<RadioDisclaimerOptionModel> = [];
-  public title = 'md-radio-button-disclaimers';
+  public title: string = 'md-radio-button-disclaimers';
 
   private buttonOptionsSubscription: Subscription = null;
 
