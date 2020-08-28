@@ -31,7 +31,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   private getButtonOptionsData(): void {
     this.loading = true;
-    this.buttonOptionsService.getButtonOptionsList().subscribe(
+    this.buttonOptionsSubscription = this.buttonOptionsService.getButtonOptionsList().subscribe(
       (data: Array<RadioDisclaimerOptionModel>): void => this.buttonServiceSuccessCallback(this, data),
       (error: any): void => this.buttonServiceErrorCallback(this, error),
       (/* completed */): void => this.buttonServiceCompletedCallback(this));
